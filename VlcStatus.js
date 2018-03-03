@@ -40,6 +40,27 @@ var VlcStatus = function(xmlString) {
 	this.random = doc.valueWithPath("random");
 	this.rate = doc.valueWithPath("rate");
 	this.position = doc.valueWithPath("position");
+	//console.log(doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","title"))
+	if(doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","title")){
+		this.title=doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","title").val;
+	}else{
+		console.log("no title")
+		if (doc.descendantWithPath("information").childWithAttribute("name", "meta").childWithAttribute("name", "filename").val){
+			this.title=doc.descendantWithPath("information").childWithAttribute("name", "meta").childWithAttribute("name", "filename").val;
+		}else{
+			this.title="Unknown"
+		}
+	}
+	if(doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","artist")){
+		this.artist=doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","artist").val;
+	}else{
+		this.artist="Unknown Artist"
+	}
+	if(doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","album")){
+		this.album=doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","album").val;
+	}else{
+		this.album="Unknown Album"
+	}
 	this.filename = doc.descendantWithPath("information")
 						.childWithAttribute("name", "meta")
 						.childWithAttribute("name", "filename").val;

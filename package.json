@@ -1,29 +1,92 @@
 {
-  "name": "droopy-vlc",
-  "version": "0.0.8",
+  "_args": [
+    [
+      {
+        "raw": "droopy-vlc",
+        "scope": null,
+        "escapedName": "droopy-vlc",
+        "name": "droopy-vlc",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\Pigpog\\Downloads\\bot\\rpc"
+    ]
+  ],
+  "_from": "droopy-vlc@latest",
+  "_id": "droopy-vlc@0.1.0",
+  "_inCache": true,
+  "_location": "/droopy-vlc",
+  "_nodeVersion": "6.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/droopy-vlc-0.1.0.tgz_1482176082035_0.3307304219342768"
+  },
+  "_npmUser": {
+    "name": "droopytersen",
+    "email": "andrew.petersen15@gmail.com"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "droopy-vlc",
+    "scope": null,
+    "escapedName": "droopy-vlc",
+    "name": "droopy-vlc",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/droopy-vlc/-/droopy-vlc-0.1.0.tgz",
+  "_shasum": "68bcd688b317af06e3771b51b4fbb8b069eb71d6",
+  "_shrinkwrap": null,
+  "_spec": "droopy-vlc",
+  "_where": "C:\\Users\\Pigpog\\Downloads\\bot\\rpc",
+  "author": {
+    "name": "Andrew Petersen"
+  },
+  "bugs": {
+    "url": "https://github.com/DroopyTersen/droopy-vlc/issues"
+  },
+  "dependencies": {
+    "droopy-http": "0.0.1",
+    "q": "~1.0.0",
+    "xmldoc": "~0.1.2"
+  },
   "description": "Node wrapper for VLC http endpoints",
-  "main": "VlcService.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "68bcd688b317af06e3771b51b4fbb8b069eb71d6",
+    "tarball": "https://registry.npmjs.org/droopy-vlc/-/droopy-vlc-0.1.0.tgz"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DroopyTersen/droopy-vlc.git"
-  },
+  "gitHead": "4616ab03f83c04ab1e24a8192b383270fbc8298b",
+  "homepage": "https://github.com/DroopyTersen/droopy-vlc",
   "keywords": [
     "droopy",
     "vlc",
     "remote-control"
   ],
-  "author": "Andrew Petersen",
   "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/DroopyTersen/droopy-vlc/issues"
+  "main": "VlcService.js",
+  "maintainers": [
+    {
+      "name": "droopytersen",
+      "email": "andrew.petersen15@gmail.com"
+    }
+  ],
+  "name": "droopy-vlc",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DroopyTersen/droopy-vlc.git"
   },
-  "homepage": "https://github.com/DroopyTersen/droopy-vlc",
-  "dependencies": {
-    "droopy-http": "0.0.1",
-    "q": "~1.0.0",
-    "xmldoc": "~0.1.2"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0"
 }
