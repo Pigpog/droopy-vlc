@@ -33,7 +33,10 @@ All methods return Q promises that resolve with a **VlcStatus** object
 	state: 'playing',
 	rate: '1',
 	position: '0.19233977794647',
-	filename: 'myvideofile.avi'
+	title:'Example Title',
+	artist:'Unknown Artist',
+	album:'Unknown Album',
+	filename: 'example.flac'
 }
 ```
 
