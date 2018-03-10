@@ -44,7 +44,6 @@ var VlcStatus = function(xmlString) {
 	if(doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","title")){
 		this.title=doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","title").val;
 	}else{
-		console.log("no title")
 		if (doc.descendantWithPath("information").childWithAttribute("name", "meta").childWithAttribute("name", "filename").val){
 			this.title=doc.descendantWithPath("information").childWithAttribute("name", "meta").childWithAttribute("name", "filename").val;
 		}else{
