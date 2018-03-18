@@ -23,7 +23,6 @@ VlcService.prototype._statusRequest = function(command, value,valueName) {
 		if (value) {
 			url += ("&" + (valueName || "input") + "=" + value);
 		}
-		console.log(url);
 	}
 	this.get(url, {}, true).then(function(xml) {
 		var status = new VlcStatus(xml);
@@ -36,7 +35,6 @@ VlcService.prototype._statusRequest = function(command, value,valueName) {
 VlcService.prototype._playlistRequest = function() {
 	var deferred = q.defer();
 	var url = this.baseUrl + "/requests/playlist.xml";
-	console.log(url);
 	this.get(url, {}, true).then(function(xml) {
 		var status = new VlcPlaylist(xml);
 		deferred.resolve(status);
