@@ -63,6 +63,7 @@ var VlcStatus = function(xmlString) {
 	this.filename = doc.descendantWithPath("information")
 						.childWithAttribute("name", "meta")
 						.childWithAttribute("name", "filename").val;
+	this.isVideo = !!this.filename.match(/^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/)
 };
 
 module.exports = VlcStatus;
