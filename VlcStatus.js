@@ -60,6 +60,11 @@ var VlcStatus = function(xmlString) {
 	}else{
 		this.album="Unknown Album"
 	}
+	if(doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","now_playing")){
+		this.streamtrack=doc.descendantWithPath("information").childWithAttribute("name","meta").childWithAttribute("name","now_playing").val
+	}else{
+		this.streamtrack=false
+	}
 	this.filename = doc.descendantWithPath("information")
 						.childWithAttribute("name", "meta")
 						.childWithAttribute("name", "filename").val;
