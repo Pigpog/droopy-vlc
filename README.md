@@ -3,7 +3,7 @@ VLC Http Service
 
 **droopy-vlc** is an HTTP service that sends commands to VLC's HTTP endpoint.
 
-##Example Usage
+## Example Usage
 
 After installing the npm module (droopy-vlc), you can require the service and start controlling Vlc. 
 ```sh
@@ -41,8 +41,8 @@ All methods return Q promises that resolve with a **VlcStatus** object
 ```
 
 
-##Supported Methods
-####status()
+## Supported Methods
+#### status()
 Passes back a `VlcStatus` object.
 ```javascript
 vlcService.status().then(function(status) {
@@ -50,7 +50,7 @@ vlcService.status().then(function(status) {
 });
 ```
 
-####seek(time)
+#### seek(time)
 Requires a time parameter in seconds.
 ```javascript
 //move the the 2 minute mark
@@ -59,7 +59,7 @@ vlcService.seek(120).then(function(status) {
 });
 ```
 
-####volume(val)
+#### volume(val)
 Requires a volume level between 0 and 200.
 ```javascript
 //max volume
@@ -68,7 +68,7 @@ vlcService.volume(125).then(function(status) {
 });
 ```
 
-####togglePause()
+#### togglePause()
 If currently paused the video will play, otherwise pause.
 ```javascript
 vlcService.togglePause().then(function(status) {
@@ -77,7 +77,7 @@ vlcService.togglePause().then(function(status) {
 });
 ```
 
-####fullscreen()
+#### fullscreen()
 If currently fullscreen, it will shrink the window, else make it fullscreen
 ```javascript
 vlcService.fullscreen().then(function(status) {
@@ -86,7 +86,7 @@ vlcService.fullscreen().then(function(status) {
 });
 ```
 
-####rate(speed)
+#### rate(speed)
 Adjusts the playback speed. Unfortunately I couldn't find a way to make it go backwords like a "rewind"
 ```javascript
 //Play 3 times as fast (fast forward)
@@ -94,35 +94,35 @@ vlcService.rate(3).then(function(status) {
 	console.log(status);
 });
 ```
-####next()
+#### next()
 Next song in the playlist.
 ```javascript
 vlcService.next().then(function(status) {
 	console.log(status);
 });
 ```
-####previous()
+#### previous()
 Previous song in the playlist.
 ```javascript
 vlcService.previous().then(function(status) {
 	console.log(status);
 });
 ```
-####play(id)
+#### play(id)
 Play song  by id in the playlist.
 ```javascript
 vlcService.play().then(function(status) {
 	console.log(status);
 });
 ```
-####deleteItem(id)
+#### deleteItem(id)
 Remove song  by id in the playlist.
 ```javascript
 vlcService.deleteItem().then(function(status) {
 	console.log(status);
 });
 ```
-####empty()
+#### empty()
 Remove all song in the playlist.
 ```javascript
 vlcService.empty().then(function(status) {
@@ -130,7 +130,7 @@ vlcService.empty().then(function(status) {
 });
 ```
 
-####playlist()
+#### playlist()
 Return the actual playlist
 [{
 	name : String,
@@ -142,14 +142,14 @@ vlcService.playlist().then(function(vlcPlaylist) {
 	console.log(vlcPlaylist);
 });
 ```
-####loop()
+#### loop()
 Repeat the entire playlist
 ```javascript
 vlcService.loop().then(function(status) {
 	console.log(status);
 });
 ```
-####repeat()
+#### repeat()
 Repeat the last song
 ```javascript
 vlcService.repeat().then(function(status) {
